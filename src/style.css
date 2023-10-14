@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+:root {
+    --primary-color: #10121c;
+    --text: #fff;
+    --ghost-text: #9b5252;
+    --secondary-color: #1f2230;
+}
+
+@keyframes rotations {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.card {
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 80%;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.desc {
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--ghost-text);
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+#layout {
+    gap: 4px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: repeat(4, 25%);
+}
+
+#violinContainer {
+    grid-row: 2/2;
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#violin {
+    display: block;
+    animation: rotations 4s linear infinite;
+    height: 60%;
+}
+
+#header {
+    width: 100%;
+    gap:15px;
+    display: grid;
+    grid-auto-flow: column;
+    height: 100%;
+}
+
+.headerHolder {
+    width: 100%;
+    padding-bottom: 15px;
+    z-index: 40;
+    background-color: #10121c;
+    margin-bottom: 1rem;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+}
+
+button {width: 100%;
+    font-size: 2rem;
+    color: var(--ghost-text);
+    background-color: var(--secondary-color);
+}
+#stradivari{
+    border-radius: 5px;
+    text-align: center;
+    font-size: 5rem;
+    background-color: #191b23;
+    color: var(--ghost-text);
+    grid-column:3/4 
+}
